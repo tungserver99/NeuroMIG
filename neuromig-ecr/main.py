@@ -2,7 +2,7 @@ from utils import config, log, miscellaneous, seed
 import os
 import numpy as np
 import basic_trainer
-from NeuroMax.NeuroMax import NeuroMax
+from NeuroMig.NeuroMig import NeuroMig
 import evaluations
 import datasethandler
 import scipy
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     
     logger = log.setup_logger(
         'main', os.path.join(current_run_dir, 'main.log'))
-    wandb.login(key="d00c9f41bdf432ec2cd6df65495965d629331898")
+    wandb.login()
     wandb.init(project=prj, config=args)
     wandb.log({'time_stamp': current_time})
 
@@ -52,7 +52,7 @@ if __name__ == "__main__":
     pretrainWE = scipy.sparse.load_npz(os.path.join(
         DATA_DIR, args.dataset, "word_embeddings.npz")).toarray()
 
-    model = NeuroMax(vocab_size=dataset.vocab_size,
+    model = NeuroMig(vocab_size=dataset.vocab_size,
                     num_topics=args.num_topics,
                     num_groups=args.num_groups,
                     dropout=args.dropout,
