@@ -16,7 +16,7 @@ In this source code, we have three cases of applying NeuroMig to ECRTM, ETM, FAS
 2. Install java
 3. Download [this java jar](https://hobbitdata.informatik.uni-leipzig.de/homes/mroeder/palmetto/palmetto-0.1.0-jar-with-dependencies.jar) to ./evaluations/pametto.jar for evaluating
 4. Download and extract [this processed Wikipedia corpus](https://hobbitdata.informatik.uni-leipzig.de/homes/mroeder/palmetto/Wikipedia_bd.zip) to ./datasets/wikipedia/ as an external reference corpus.
-5. I need to have the wandb api key to track the metrics of the method.
+5. We need to have the wandb api key to track the metrics of the method.
 
 ## Usage
 To run and evaluate our model for 20NG dataset, cd to each of the folder and run this example:
